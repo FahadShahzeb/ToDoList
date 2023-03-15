@@ -1,10 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import SplashScreen from '../screens/splash/splash';
-import LoginScreen from '../screens/auth/login';
-import RegisterScreen from '../screens/auth/register';
-import Dashboard from '../screens/dashboard/home';
+
 import {
     useFonts,
     Poppins_100Thin,
@@ -27,8 +23,8 @@ import {
     Poppins_900Black_Italic,
 
 } from '@expo-google-fonts/dev';
-const Stack = createStackNavigator();
-
+import Main from './Main'
+import { Text, View } from 'react-native';
 
 
 export default function RootStack() {
@@ -59,13 +55,11 @@ export default function RootStack() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="SplashScreen">
-                <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }} />
-            </Stack.Navigator>
+            {/* <View><Text>gtufhvdkskmlc,l</Text>            </View> */}
+            <Main />
         </NavigationContainer>
     );
 }
+
+
 
